@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
         factory(App\User::class, 5)->create();
 
         // Create some projects for user 1
-        Project::create([
+        $project = Project::create([
             'user_id' => 1,
             'name' => 'Epic Sales',
             'description' => 'The sales platform that boosts your sales with AI and blockchain',
@@ -29,7 +29,9 @@ class DatabaseSeeder extends Seeder
             'facebook' => null,
             'production_url' => null,
             'status' => 'IDEA'
-        ])->images()->createMany(
+        ]);
+        
+        $project->images()->createMany(
             [
                 [
                     'priority' => 1,
@@ -45,6 +47,15 @@ class DatabaseSeeder extends Seeder
                 ],                                
             ]
         );
+        /*
+        $project->projectMembers()->createMany(
+            [
+                [
+                    "user_id" => 2
+                ]
+            ]
+        );
+        */
 
         Project::create([
             'user_id' => 1,
