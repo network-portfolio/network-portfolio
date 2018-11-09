@@ -33,7 +33,11 @@ class SprintlistSeeder extends Seeder
                 [
                     'priority' => 1,
                     'url' => env('APP_URL') . '/images/sprintlist.io/1.png'
-                ],                               
+                ],
+                [
+                    'priority' => 2,
+                    'url' => env('APP_URL') . '/images/sprintlist.io/2.png'
+                ],                                               
             ]
         );
 

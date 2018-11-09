@@ -5,7 +5,7 @@ use App\User;
 use App\Image;
 use App\Project;
 
-class imjustworking extends Seeder
+class ImjustworkingSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -30,15 +30,15 @@ class imjustworking extends Seeder
             [
                 [
                     'priority' => 1,
-                    'url' => '/images/imjustworking/Imjustworking - The camo chat for the office djungle! 2018-11-09 18-44-49.png'
+                    'url' => '/images/imjustworking/1.png'
                 ],
                 [
                     'priority' => 2,
-                    'url' => '/images/imjustworking/#imjustworking — Imjustworking - The camo chat for the office djungle! 2018-11-09 19-12-05.png'
+                    'url' => '/images/imjustworking/2.png'
                 ],
                 [
                     'priority' => 3,
-                    'url' => '/images/imjustworking/#imjustworking — Imjustworking - The camo chat for the office djungle! 2018-11-09 19-14-07.png'
+                    'url' => '/images/imjustworking/3.png'
                 ],                                
             ]
         );

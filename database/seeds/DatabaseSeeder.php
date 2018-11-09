@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
         $this->call(DeveloperSeeder::class);
         $this->call(StimpackSeeder::class);
         $this->call(SprintlistSeeder::class);
+        $this->call(ImjustworkingSeeder::class);
 
         /*
             // EXAMPLE *********************************************
