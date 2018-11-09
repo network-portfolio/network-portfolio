@@ -21,12 +21,11 @@ class CreateProjectsTable extends Migration
             $table->string('name');
             $table->string('description');
             $table->string('elevator_pitch');
-            $table->string('github');
-            $table->string('twitter');
-            $table->string('facebook');
-            $table->string('production_url');
+            $table->string('github')->nullable();
+            $table->string('twitter')->nullable();
+            $table->string('facebook')->nullable();
+            $table->string('production_url')->nullable();
             $table->string('status');
-
         });
     }
 

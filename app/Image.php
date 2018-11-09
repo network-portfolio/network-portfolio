@@ -12,7 +12,7 @@ class Image extends Model
      * @var array
      */
     protected $fillable = [
-        'timestamps', 'project_id', 'priority'
+        'timestamps', 'project_id', 'priority', 'url'
     ];
 
     /**
