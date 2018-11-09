@@ -32,15 +32,15 @@ class StimpackSeeder extends Seeder
             [
                 [
                     'priority' => 1,
-                    'url' => 'https://picsum.photos/500/100?image=1'
+                    'url' => env('APP_URL') . '/images/stimpack/1.png'
                 ],
                 [
                     'priority' => 2,
-                    'url' => 'https://picsum.photos/500/100?image=2'
+                    'url' => env('APP_URL') . '/images/stimpack/2.png'
                 ],
                 [
                     'priority' => 3,
-                    'url' => 'https://picsum.photos/500/100?image=3'
+                    'url' => env('APP_URL') . '/images/stimpack/3.png'
                 ],                                
             ]
         );

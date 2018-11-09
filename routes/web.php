@@ -17,6 +17,6 @@ Route::get('/', function () {
 
 Route::get('/projects', function () {
     return view('projects/index')->with([
-        'projects' => App\Project::with('images')->get()
+        'projects' => App\Project::with(['images', 'projectMembers.user'])->get()
     ]);
 });
