@@ -14,7 +14,7 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        return Project::with(['images', 'projectMembers'])->get();
+        return Project::with(['images', 'projectMembers.user'])->get();
     }
 
     /**
