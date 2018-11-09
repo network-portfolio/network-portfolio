@@ -15,6 +15,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        $this->call(StimpackSeeder::class);
+        $this->call(DeveloperSeeder::class);
+
+
+        /*
+            // EXAMPLE *********************************************
         // Create users
         factory(App\User::class, 5)->create();
 
@@ -47,7 +53,7 @@ class DatabaseSeeder extends Seeder
                 ],                                
             ]
         );
-        /*
+        
         $project->projectMembers()->createMany(
             [
                 [
@@ -55,7 +61,7 @@ class DatabaseSeeder extends Seeder
                 ]
             ]
         );
-        */
+        
 
         Project::create([
             'user_id' => 1,
@@ -109,6 +115,7 @@ class DatabaseSeeder extends Seeder
                         'url' => 'https://picsum.photos/500/100?image=9'
                     ],                                
                 ]
-            );        
+            );
+        */        
     }
 }
