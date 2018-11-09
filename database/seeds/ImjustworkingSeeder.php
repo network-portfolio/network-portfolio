@@ -23,7 +23,19 @@ class ImjustworkingSeeder extends Seeder
             'twitter' => null,
             'facebook' => null,
             'production_url' => null,
-            'status' => 'deprecated'
+            'status' => 'deprecated',
+            'lessons_learnt' => '
+                [
+                    "Do not monkey back and build your self into or ontop of someone elses code",
+                    "Do not use small SaaS companies for crucial components (Quickblox)",
+                    "Cheap indian freelancers will not work",
+                    "Its nice to keep all DOM manipulation in one JS file but it is NOT very sustainable",
+                    "Plan out WHEN the project should be done and allocate time to it",
+                    "We FINISHED. Extreme persistance",
+                    "Involve dedicated server person",
+                    "We ignored the naysayers",
+                ]
+            '
         ]);
         
         $project->images()->createMany(

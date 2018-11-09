@@ -26,6 +26,7 @@ class CreateProjectsTable extends Migration
             $table->string('facebook')->nullable();
             $table->string('production_url')->nullable();
             $table->string('status');
+            $table->string('lessons_learnt')->nullable();
         });
     }
 
