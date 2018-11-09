@@ -36,7 +36,7 @@ class User extends Model
 
     public static function scopeNamed($query, $name)
     {
-       return $query->where('name', 'LIKE', '%' . $name . '%')->first();
+       return $query->where('name', 'LIKE', '%' . $name . '%')->get()->first();
     }
 
 }

@@ -15,9 +15,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(StimpackSeeder::class);
+        
         $this->call(DeveloperSeeder::class);
-
+        $this->call(StimpackSeeder::class);
 
         /*
             // EXAMPLE *********************************************
