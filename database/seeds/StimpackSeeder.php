@@ -14,6 +14,7 @@ class StimpackSeeder extends Seeder
      */
     public function run()
     {
+        // PROJECT DETAILS
         $project = Project::create([
             'user_id' => User::named('Anders')->id,
             'name' => 'stimpack',
@@ -26,6 +27,7 @@ class StimpackSeeder extends Seeder
             'status' => 'production'
         ]);
         
+        // PROJECT IMAGES
         $project->images()->createMany(
             [
                 [
@@ -43,6 +45,7 @@ class StimpackSeeder extends Seeder
             ]
         );
 
+        // PROJECT MEMBERS
         $project->projectMembers()->createMany([
             [
                 'user_id' => User::named('Olof')->id
