@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class User extends Model
+class ProjectMember extends Model
 {
     /**
      * The attributes that are mass assignable.
@@ -12,7 +12,7 @@ class User extends Model
      * @var array
      */
     protected $fillable = [
-        'timestamps', 'name', 'email', 'password', 'rememberToken'
+        'timestamps', 'project_id', 'priority', 'url'
     ];
 
     /**
@@ -21,17 +21,17 @@ class User extends Model
      * @var array
      */
     protected $hidden = [
-        'password'
+        
     ];
     
-    public function projects()
+    public function project()
     {
-       return $this->hasMany('App\Project');
+       return $this->belongsTo('App\Project');
     }
 
-    public static function scopeNamed($query, $name)
+    public function user()
     {
-       return $query->where('name', 'LIKE', '%' . $name . '%')->get()->first();
-    }
+       return $this->belongsTo('App\User');
+    }    
 
 }

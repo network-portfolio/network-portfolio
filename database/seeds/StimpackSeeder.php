@@ -24,7 +24,9 @@ class StimpackSeeder extends Seeder
             'facebook' => null,
             'production_url' => null,
             'status' => 'production'
-        ])->images()->createMany(
+        ]);
+        
+        $project->images()->createMany(
             [
                 [
                     'priority' => 1,
@@ -41,6 +43,10 @@ class StimpackSeeder extends Seeder
             ]
         );
 
-        
+        $project->projectMembers()->createMany([
+            [
+                'user_id' => User::named('Olof')->id
+            ],
+        ]);
     }
 }
