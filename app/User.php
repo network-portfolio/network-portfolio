@@ -34,7 +34,7 @@ class User extends Model
        return $this->hasMany('App\ProjectMember');
     }
 
-    public static function named($query, $name)
+    public static function scopeNamed($query, $name)
     {
        return $query->where('name', 'LIKE', '%' . $name . '%')->first();
     }
