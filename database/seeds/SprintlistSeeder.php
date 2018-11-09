@@ -24,7 +24,12 @@ class SprintlistSeeder extends Seeder
             'twitter' => null,
             'facebook' => null,
             'production_url' => null,
-            'status' => 'production'
+            'status' => 'production',
+            'lessons_learnt' => '
+                [
+                    "Do not monkey back and build your self into or ontop of someone elses code",
+                ]
+            '            
         ]);
         
         // PROJECT IMAGES
