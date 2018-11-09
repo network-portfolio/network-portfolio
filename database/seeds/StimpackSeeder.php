@@ -24,7 +24,19 @@ class StimpackSeeder extends Seeder
             'twitter' => null,
             'facebook' => null,
             'production_url' => null,
-            'status' => 'production'
+            'status' => 'production',
+            'lessons_learnt' => '
+                [
+                    "+ we built an entire ecosystem",
+                    "+ using react is cred intensive",
+                    "- avoid the never ending scope creep",
+                    "+ scope bravery",
+                    "- the product lacks in presentation - it assumes the end user will understand stuff not explained or explained badly",
+                    "- brilliant unpolished idea",
+                    "+ first kickstarter with ~1% converstions on 500 SEK",
+                    "- avoid complicated custom designs, preferably use of the shelf components instead",
+                ]
+            '            
         ]);
         
         // PROJECT IMAGES
