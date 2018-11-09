@@ -7,6 +7,11 @@
 
         <title>slutty-network-portfolio</title>
 
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+        <title>Sprintlist.io - Hire awesome people to do short remote jobs fast!</title>
+        <meta name="description" content="Hire awesome people to do short remote jobs fast or find short jobs to do from home">
+        <meta name="keywords" content="sprint,jobs,hire,project,freelancer">  
+
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
@@ -63,6 +68,10 @@
                 margin-bottom: 30px;
             }
         </style>
+
+        <link rel="stylesheet" href="{{ mix('css/app.css') }} ">
+        <!--<link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">-->
+        <script type="text/javascript" src="{{ mix('js/app.js') }}"></script>
     </head>
     <body>
         <div class="flex-center position-ref full-height">
@@ -78,7 +87,7 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
+                <div class="title m-b-md text-red">
                     slutty-network-portfolio
                 </div>
 
