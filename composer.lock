@@ -4,8 +4,59 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d5bca48e56bbf3a25645858fcab9c285",
+    "content-hash": "01a8775dc2a67dbc988036145adcee0f",
     "packages": [
+        {
+            "name": "ajthinking/tinx",
+            "version": "v2.1.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/furey/tinx.git",
+                "reference": "3126c2183764b262f7c929a4592383824445cd86"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/furey/tinx/zipball/3126c2183764b262f7c929a4592383824445cd86",
+                "reference": "3126c2183764b262f7c929a4592383824445cd86",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/container": "^5.2",
+                "laravel/tinker": "~1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.4|^7.0"
+            },
+            "type": "laravel",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Ajthinking\\Tinx\\TinxServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Ajthinking\\Tinx\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Anders Jürisoo",
+                    "email": "jurisoo@hotmail.com"
+                },
+                {
+                    "name": "James Furey",
+                    "homepage": "https://github.com/furey"
+                }
+            ],
+            "description": "Reload your Laravel Tinker session from inside Tinker, plus magic shortcuts for first(), find(), where(), and more!",
+            "time": "2018-08-28T12:09:16+00:00"
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "0.1",
