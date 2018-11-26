@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Project;
+use App\ProjectMember;
 
 class UserProjectController extends Controller
 {
@@ -14,9 +16,19 @@ class UserProjectController extends Controller
      */
     public function index(User $user)
     {
-        return $user->projects()->with('projectMembers')->get()->concat(
-            User::named('Olof')->projects()->get()
-        );
+        //return $user->projects()->get(); //->get();
+
+        //$projectMemberships = ProjectMember::where('user_id', $user->id);
+
+        return Project::whereHas('projectMembers', function ($query) use($user) {
+            $query->where('user_id', $user->id);
+        })->get();
+
+
+        return \App\ProjectMember::first()->project()->get();
+        // projects()->with('projectMembers')->get()->concat(
+        //     User::named('Olof')->projects()->get()
+        // );
         
         //Project::where('')->with(['images', 'projectMembers.user'])->get();
     }
