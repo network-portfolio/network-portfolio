@@ -5,10 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>slutty-network-portfolio</title>
+        <title>network-portfolio</title>
 
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <title>Sprintlist.io - Hire awesome people to do short remote jobs fast!</title>
         <meta name="description" content="Hire awesome people to do short remote jobs fast or find short jobs to do from home">
         <meta name="keywords" content="sprint,jobs,hire,project,freelancer">  
 
@@ -70,7 +69,6 @@
         </style>
 
         <link rel="stylesheet" href="{{ mix('css/app.css') }} ">
-        <!--<link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">-->
         <script type="text/javascript" src="{{ mix('js/app.js') }}"></script>
     </head>
     <body>
@@ -92,11 +90,9 @@
                 </div>
                 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="/projects">Projects</a>
+                    <a href="/codersrank">Codersrank.io</a>
+                    <a href="https://github.com/ajthinking/network-portfolio">GitHub</a>
                 </div>
             </div>
         </div>

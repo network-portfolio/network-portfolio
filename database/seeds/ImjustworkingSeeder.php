@@ -15,7 +15,7 @@ class ImjustworkingSeeder extends Seeder
     public function run()
     {
         $project = Project::create([
-            'user_id' => User::named('Anders')->id,
+            'user_id' => User::named('Olof')->id,
             'name' => 'imjustworking',
             'description' => 'A GUI customizable chat built on a self-hosted IRC engine. Create a replica of your actual desktop workspace but it really is you chatting with your friends!',
             'elevator_pitch' => 'A camo chat for the office djungle',
@@ -58,6 +58,9 @@ class ImjustworkingSeeder extends Seeder
         $project->projectMembers()->createMany([
             [
                 'user_id' => User::named('Olof')->id
+            ],
+            [
+                'user_id' => User::named('Anders')->id
             ],
         ]);
     }

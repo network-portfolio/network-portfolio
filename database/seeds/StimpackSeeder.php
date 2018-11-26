@@ -60,8 +60,11 @@ class StimpackSeeder extends Seeder
         // PROJECT MEMBERS
         $project->projectMembers()->createMany([
             [
-                'user_id' => User::named('Olof')->id
+                'user_id' => User::named('Anders')->id
             ],
+            [
+                'user_id' => User::named('Olof')->id
+            ],            
         ]);
     }
 }

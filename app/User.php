@@ -29,9 +29,13 @@ class User extends Model
        return $this->hasMany('App\Project');
     }
 
+    public function projectMembers()
+    {
+       return $this->hasMany('App\Project');
+    }
+
     public static function scopeNamed($query, $name)
     {
        return $query->where('name', 'LIKE', '%' . $name . '%')->get()->first();
     }
-
 }
