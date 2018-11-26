@@ -22,27 +22,3 @@
 
 ## users
 * email
-
-
-countries
-    id - integer
-    name - string
-
-users
-    id - integer
-    country_id - integer
-    name - string
-
-posts
-    id - integer
-    user_id - integer
-    title - string
-
-
-
-
-user
-
-projectmember
-
-projects
