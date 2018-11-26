@@ -35,6 +35,7 @@ class StimpackSeeder extends Seeder
                     "- brilliant unpolished idea",
                     "+ first kickstarter with ~1% converstions on 500 SEK",
                     "- avoid complicated custom designs, preferably use of the shelf components instead",
+                    "+ awesome promo-video",
                 ]
             '            
         ]);
