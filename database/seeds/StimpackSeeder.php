@@ -65,7 +65,10 @@ class StimpackSeeder extends Seeder
             ],
             [
                 'user_id' => User::named('Olof')->id
-            ],            
+            ],
+            [
+                'user_id' => User::named('Marcus')->id
+            ],                        
         ]);
     }
 }

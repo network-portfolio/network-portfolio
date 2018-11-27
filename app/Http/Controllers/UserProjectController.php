@@ -22,7 +22,7 @@ class UserProjectController extends Controller
 
         return Project::whereHas('projectMembers', function ($query) use($user) {
             $query->where('user_id', $user->id);
-        })->with('projectMembers.user')->get();
+        })->with(['projectMembers.user', 'images'])->get();
 
 
         return \App\ProjectMember::first()->project()->get();

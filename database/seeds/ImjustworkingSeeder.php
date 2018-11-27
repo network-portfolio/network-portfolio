@@ -42,15 +42,15 @@ class ImjustworkingSeeder extends Seeder
             [
                 [
                     'priority' => 1,
-                    'url' => '/images/imjustworking/1.png'
+                    'url' => env('APP_URL') .'/images/imjustworking/1.png'
                 ],
                 [
                     'priority' => 2,
-                    'url' => '/images/imjustworking/2.png'
+                    'url' => env('APP_URL') .'/images/imjustworking/2.png'
                 ],
                 [
                     'priority' => 3,
-                    'url' => '/images/imjustworking/3.png'
+                    'url' => env('APP_URL') .'/images/imjustworking/3.png'
                 ],                                
             ]
         );
