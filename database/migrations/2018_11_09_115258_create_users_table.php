@@ -17,6 +17,7 @@ class CreateUsersTable extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->string('name');
+            $table->string('portfolio_url');
             $table->string('avatar_url');
             $table->string('email')->unique();
             $table->string('password');
