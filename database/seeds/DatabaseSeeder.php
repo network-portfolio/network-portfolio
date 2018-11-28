@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
         
         $this->call(StimpackSeeder::class);
         $this->call(SprintlistSeeder::class);
-        $this->call(ImjustworkingSeeder::class);      
+        $this->call(ImjustworkingSeeder::class);
+        $this->call(PimpmydrawingSeeder::class);
     }
 }
