@@ -22,5 +22,7 @@ class DatabaseSeeder extends Seeder
         $this->call(SprintlistSeeder::class);
         $this->call(ImjustworkingSeeder::class);
         $this->call(PimpmydrawingSeeder::class);
+        $this->call(TinxSeeder::class);
+        $this->call(FmwproxySeeder::class);
     }
 }
