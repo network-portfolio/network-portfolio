@@ -5,7 +5,7 @@ use App\User;
 use App\Image;
 use App\Project;
 
-class TinxSeeder extends Seeder
+class StackbrotherhoodSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,7 +16,7 @@ class TinxSeeder extends Seeder
     {
         $project = Project::create([
             'user_id' => User::named('Anders')->id,
-            'name' => 'tinx',
+            'name' => 'stackbrotherhood',
             'description' => 'Placeholder',
             'elevator_pitch' => 'Placeholder',
             'github' => "",
@@ -35,7 +35,7 @@ class TinxSeeder extends Seeder
             [
                 [
                     'priority' => 1,
-                    'url' => env('APP_URL') .'/images/tinx/1.gif'
+                    'url' => env('APP_URL') .'/images/stackbrotherhood/1.png'
                 ],                             
             ]
         );

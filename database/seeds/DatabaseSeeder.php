@@ -24,5 +24,6 @@ class DatabaseSeeder extends Seeder
         $this->call(PimpmydrawingSeeder::class);
         $this->call(TinxSeeder::class);
         $this->call(FmwproxySeeder::class);
+        $this->call(StackbrotherhoodSeeder::class);
     }
 }
