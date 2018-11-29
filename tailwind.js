@@ -43,6 +43,14 @@ let defaultConfig = require('tailwindcss/defaultConfig')()
 |
 */
 
+let themeEasyBlue = {
+  'primary1': 'rgba(39, 76, 119, 1)',
+  'primary2': 'rgba(231, 236, 239, 1)',
+  'primary3': 'rgba(96, 150, 186, 1)',
+  'primary4': 'rgba(163, 206, 241, 1)',
+  'primary5': 'rgba(139, 140, 137, 1)',
+}
+
 let colors = {
   'transparent': 'transparent',
 
@@ -127,6 +135,8 @@ let colors = {
   'pink-light': '#fa7ea8',
   'pink-lighter': '#ffbbca',
   'pink-lightest': '#ffebef',
+
+  ...themeEasyBlue,
 }
 
 module.exports = {
