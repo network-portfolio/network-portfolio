@@ -1,24 +1,18 @@
-# network-portfolio
+## A Laravel/Vue/tailwind
+I find myself without a portfolio, even though I did do some interesting projects in the past. These projects were often achieved together with friends or partners. So now I am investigating how to make a connected "network portfolio" where we can share these projects across our personal websites.
 
-## projects
-* id
-* user_id
-* name
-* description
-* elevator-pitch
-* github
-* twitter
-* facebook
-* production_url
-* status ( IDEA | PRODUCTION | DEPRICATED | UNDER_CONSTRUCTION )
+Sounds interesting? Please take the [survey](https://docs.google.com/forms/d/e/1FAIpQLSflof9NgS6T14WwXv4tL7Z8CRWb0bL4Xz4uj5we_qlBZOgzIQ/viewform?usp=sf_link). It really would help build a better product.
 
-## project_members
-* user_id
-* project_id
+Or feel free to chat in the [collaboratours wanted issue](www.google.com).
 
-## images
-* project_id
-* priority
+### Features (for a MVP)
+* Sign up with github
+* Add a project on the hub
+* Add/remove collaboratours to projects
+* Project owner and project collaboratour must both be able to approve/decline the collaboration listing.
+* Consume the hub project API to populate a personal portfolio website
 
-## users
-* email
+### Roadmap
+
+
+### Development installation
