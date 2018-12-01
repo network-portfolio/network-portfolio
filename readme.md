@@ -23,8 +23,14 @@ Or feel free to chat in the [collaboratours wanted issue](https://github.com/ajt
 
 ### Development installation
 ```
-git clone
+git clone git@github.com:ajthinking/network-portfolio.git
+cd network-portfolio
+composer install
+cp .env.example .env
+php artisan key:generate
+touch database/database.sqlite
 php artisan migrate:fresh --seed
 yarn
 yarn dev && yarn watch
+# Now test go to http://network-portfolio.test/api/projects
 ```
