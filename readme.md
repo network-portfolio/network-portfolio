@@ -1,4 +1,4 @@
-## A network portfolio built with Laravel/Vue/tailwindcss
+## A network portfolio built with Laravel + Vue + tailwindcss
 Did you find yourself without a portfolio, even though you did do some interesting projects in the past? These projects might have been achieved together with friends or partners? Let's investigating how to make a connected "network portfolio" where we can share these projects across our personal websites!
 
 ![sketh](public/images/explain.png)
@@ -6,8 +6,6 @@ Did you find yourself without a portfolio, even though you did do some interesti
 Sounds interesting? Please take this [survey](https://docs.google.com/forms/d/e/1FAIpQLSflof9NgS6T14WwXv4tL7Z8CRWb0bL4Xz4uj5we_qlBZOgzIQ/viewform?usp=sf_link). It really will help building a better product.
 
 Or feel free to chat in the [collaboratours wanted issue](www.google.com).
-
-Below are some ideas, subject to change:
 
 ### Features (for a MVP)
 * Socialite signup
