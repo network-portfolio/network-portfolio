@@ -5,7 +5,7 @@ Did you find yourself without a portfolio, even though you did do some interesti
 
 Sounds interesting? Please take this [survey](https://docs.google.com/forms/d/e/1FAIpQLSflof9NgS6T14WwXv4tL7Z8CRWb0bL4Xz4uj5we_qlBZOgzIQ/viewform?usp=sf_link). It really will help building a better product.
 
-Or feel free to chat in the [collaboratours wanted issue](www.google.com).
+Or feel free to chat in the [collaboratours wanted issue](https://github.com/ajthinking/network-portfolio/issues/1).
 
 ### Features (for a MVP)
 * Socialite signup
