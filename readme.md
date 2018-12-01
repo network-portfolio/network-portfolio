@@ -24,7 +24,9 @@ Below are some ideas, subject to change:
 * create a sample implementation using the API (a personal portfolio to be deployed on a personal domain)
 
 ### Development installation
+```
 git clone
 php artisan migrate:fresh --seed
 yarn
 yarn dev && yarn watch
+```
