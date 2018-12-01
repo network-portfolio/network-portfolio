@@ -12,7 +12,7 @@ Or feel free to chat in the [collaboratours wanted issue](https://github.com/ajt
 * Add a project on the hub (add name, description, links, images etc)
 * Add/remove collaboratours to projects
 * Project owner and project collaboratour must both be able to approve/decline the collaboration listing.
-* Consume the hub project API to populate a personal portfolio website. The project should provide a sample implementation.
+* An API to populate the personal portfolio websites of the users. The project should provide a sample implementation.
 
 ### Roadmap
 * research
