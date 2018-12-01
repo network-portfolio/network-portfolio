@@ -20,6 +20,7 @@ Or feel free to chat in the [collaboratours wanted issue](https://github.com/ajt
 * scaffold and seed basic API
 * build a frontend for adding/managing projects
 * create a sample implementation using the API (a personal portfolio to be deployed on a personal domain)
+* find a better name
 
 ### Development installation
 ```
