@@ -11777,7 +11777,7 @@ var staticRenderFns = [
       "div",
       { staticClass: "flex items-center pl-4 h-8 bg-primary1" },
       [
-        _c("a", { attrs: { href: "https://andersjurisoo.com" } }, [
+        _c("a", { attrs: { href: "https://google.com" } }, [
           _c(
             "div",
             {
