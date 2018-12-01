@@ -7,8 +7,10 @@ Sounds interesting? Please take this [survey](https://docs.google.com/forms/d/e/
 
 Or feel free to chat in the [collaboratours wanted issue](www.google.com).
 
+Below are some ideas, subject to change:
+
 ### Features (for a MVP)
-* Sign up with github
+* Socialite signup
 * Add a project on the hub (add name, description, links, images etc)
 * Add/remove collaboratours to projects
 * Project owner and project collaboratour must both be able to approve/decline the collaboration listing.
