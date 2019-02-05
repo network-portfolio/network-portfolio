@@ -25,5 +25,6 @@ class DatabaseSeeder extends Seeder
         $this->call(TinxSeeder::class);
         $this->call(FmwproxySeeder::class);
         $this->call(StackbrotherhoodSeeder::class);
+        $this->call(BevakaBostadStockholmSeeder::class);
     }
 }
