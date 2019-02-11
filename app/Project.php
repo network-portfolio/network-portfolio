@@ -21,7 +21,7 @@ class Project extends Model
      * @var array
      */
     protected $hidden = [
-        
+        'lessons_learnt'
     ];
     
     public function user()

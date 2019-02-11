@@ -4,8 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Project;
 use Illuminate\Http\Request;
+use Validator;
+use Carbon\Carbon;
+use Intervention\Image\ImageManagerStatic;
+use App\User;
+use App\Image;
 
-class ProjectController extends Controller
+class ProjectAPIController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +19,7 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        return view('projects.index');
+        return Project::with(['images', 'projectMembers.user'])->get();
     }
 
     /**
@@ -24,7 +29,7 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        return view('projects.create');
+        //
     }
 
     /**
@@ -35,7 +40,44 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $imageData = $request->get('image');
+        $fileName = Carbon::now()->timestamp . '_' . uniqid() . '.' . explode('/', explode(':', substr($imageData, 0, strpos($imageData, ';')))[1])[1];
+        ImageManagerStatic::make($request->get('image'))->save(public_path('images/new/').$fileName);
+        
+        return $request->get('name');
+        
+        // $project = Project::create([
+        //     'user_id' => User::named('Anders')->id,
+        //     'name' => 'a new project',
+        //     'description' => 'Placeholder',
+        //     'elevator_pitch' => 'Placeholder',
+        //     'github' => "",
+        //     'twitter' => null,
+        //     'facebook' => null,
+        //     'production_url' => '',
+        //     'status' => 'active',
+        //     'lessons_learnt' => '
+        //         [
+        //             //
+        //         ]
+        //     '
+        // ]);
+        
+        // $project->images()->createMany(
+        //     [
+        //         [
+        //             'priority' => 1,
+        //             'url' => env('APP_URL') .'/images/new/1.gif'
+        //         ],                             
+        //     ]
+        // );
+
+        // $project->projectMembers()->createMany([
+        //     [
+        //         'user_id' => User::named('Anders')->id
+        //     ],
+        // ]);
+
     }
 
     /**
