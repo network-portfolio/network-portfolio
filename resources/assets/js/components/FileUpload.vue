@@ -1,11 +1,21 @@
 <template>
     <div class="max-w-md flex flex-col mx-auto pt-2">
+        <h3>Create new project</h3>
         <input v-model="name" name="name" class="mb-2" placeholder="name">
 
-        <textarea class="mb-2" name="description" placeholder="description"></textarea>
+        <textarea v-model="description" class="mb-2" name="description" placeholder="description"></textarea>
         
+        <input v-model="github" name="github" class="mb-2" placeholder="github">
+
+        <input v-model="production_url" name="production_url" class="mb-2" placeholder="production_url">
+
         <img :src="image" class="img-responsive">
         <input type="file" v-on:change="onFileChange" class="form-control">
+
+
+
+
+
         <button class="mt-2 bg-primary1 hover:bg-primary3 text-white font-bold py-2 px-4 rounded" @click="upload">Upload</button>
     </div>
 </template>
@@ -21,7 +31,10 @@
         data(){
             return {
                 image: '',
-                name: ''
+                name: '',
+                description: '',
+                github: '',
+                production_url: ''
             }
         },
         methods: {
@@ -41,10 +54,13 @@
             },
             upload(){
                 axios.post(
-                    '/api/projects',
+                    '/projects',
                     {
                         image: this.image,
-                        name: this.name
+                        name: this.name,
+                        description: this.description,
+                        github: this.github,
+                        production_url: this.production_url
                     },
                     {
                         headers: {

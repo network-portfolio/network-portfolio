@@ -4,6 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Project;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
+use Intervention\Image\ImageManagerStatic;
+use App\User;
+use App\Image;
+
 
 class ProjectController extends Controller
 {
@@ -35,7 +40,37 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $imageData = $request->get('image');
+        $fileName = Carbon::now()->timestamp . '_' . uniqid() . '.' . explode('/', explode(':', substr($imageData, 0, strpos($imageData, ';')))[1])[1];
+
+        if (!file_exists(public_path('images/' . $request->get('name')))) {
+            mkdir(public_path('images/' . $request->get('name')), 0777, true);
+        }
+
+        ImageManagerStatic::make($request->get('image'))->save(public_path('images/' . $request->get('name')).$fileName);
+        
+        $project = Project::create([
+            'user_id' => User::named('Anders')->id,
+            'name' => $request->get('name'),
+            'description' => $request->get('description'),
+            'github' => $request->get('github'),
+            'production_url' => $request->get('production_url'),
+        ]);
+        
+        $project->images()->createMany(
+            [
+                [
+                    'priority' => 1,
+                    'url' => env('APP_URL') .'/images/' . $request->get('name') . $fileName
+                ],                             
+            ]
+        );
+
+        $project->projectMembers()->createMany([
+            [
+                'user_id' => User::named('Anders')->id
+            ],
+        ]);
     }
 
     /**

@@ -12,7 +12,7 @@ class ProjectMember extends Model
      * @var array
      */
     protected $fillable = [
-        'timestamps', 'project_id', 'priority', 'url'
+        'timestamps', 'project_id', 'priority', 'url', 'user_id'
     ];
 
     /**

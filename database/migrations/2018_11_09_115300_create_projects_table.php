@@ -20,12 +20,12 @@ class CreateProjectsTable extends Migration
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('name');
             $table->string('description');
-            $table->string('elevator_pitch');
+            $table->string('elevator_pitch')->nullable();
             $table->string('github')->nullable();
             $table->string('twitter')->nullable();
             $table->string('facebook')->nullable();
             $table->string('production_url')->nullable();
-            $table->string('status');
+            $table->string('status')->nullable();
             $table->string('lessons_learnt')->nullable();
         });
     }

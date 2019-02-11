@@ -13927,13 +13927,26 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         return {
             image: '',
-            name: ''
+            name: '',
+            description: '',
+            github: '',
+            production_url: ''
         };
     },
 
@@ -13952,9 +13965,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             reader.readAsDataURL(file);
         },
         upload: function upload() {
-            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post('/api/projects', {
+            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post('/projects', {
                 image: this.image,
-                name: this.name
+                name: this.name,
+                description: this.description,
+                github: this.github,
+                production_url: this.production_url
             }, {
                 headers: {
                     //'Content-Type': 'multipart/form-data'
@@ -14863,6 +14879,8 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "max-w-md flex flex-col mx-auto pt-2" }, [
+    _c("h3", [_vm._v("Create new project")]),
+    _vm._v(" "),
     _c("input", {
       directives: [
         {
@@ -14886,8 +14904,69 @@ var render = function() {
     }),
     _vm._v(" "),
     _c("textarea", {
+      directives: [
+        {
+          name: "model",
+          rawName: "v-model",
+          value: _vm.description,
+          expression: "description"
+        }
+      ],
       staticClass: "mb-2",
-      attrs: { name: "description", placeholder: "description" }
+      attrs: { name: "description", placeholder: "description" },
+      domProps: { value: _vm.description },
+      on: {
+        input: function($event) {
+          if ($event.target.composing) {
+            return
+          }
+          _vm.description = $event.target.value
+        }
+      }
+    }),
+    _vm._v(" "),
+    _c("input", {
+      directives: [
+        {
+          name: "model",
+          rawName: "v-model",
+          value: _vm.github,
+          expression: "github"
+        }
+      ],
+      staticClass: "mb-2",
+      attrs: { name: "github", placeholder: "github" },
+      domProps: { value: _vm.github },
+      on: {
+        input: function($event) {
+          if ($event.target.composing) {
+            return
+          }
+          _vm.github = $event.target.value
+        }
+      }
+    }),
+    _vm._v(" "),
+    _c("input", {
+      directives: [
+        {
+          name: "model",
+          rawName: "v-model",
+          value: _vm.production_url,
+          expression: "production_url"
+        }
+      ],
+      staticClass: "mb-2",
+      attrs: { name: "production_url", placeholder: "production_url" },
+      domProps: { value: _vm.production_url },
+      on: {
+        input: function($event) {
+          if ($event.target.composing) {
+            return
+          }
+          _vm.production_url = $event.target.value
+        }
+      }
     }),
     _vm._v(" "),
     _c("img", { staticClass: "img-responsive", attrs: { src: _vm.image } }),
