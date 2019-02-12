@@ -43,11 +43,11 @@ class ProjectController extends Controller
         $imageData = $request->get('image');
         $fileName = Carbon::now()->timestamp . '_' . uniqid() . '.' . explode('/', explode(':', substr($imageData, 0, strpos($imageData, ';')))[1])[1];
 
-        if (!file_exists(public_path('images/' . $request->get('name')))) {
-            mkdir(public_path('images/' . $request->get('name')), 0777, true);
+        if (!file_exists(public_path('images/uploads/' . $request->get('name')))) {
+            mkdir(public_path('images/uploads/' . $request->get('name')), 0777, true);
         }
 
-        ImageManagerStatic::make($request->get('image'))->save(public_path('images/' . $request->get('name')).$fileName);
+        ImageManagerStatic::make($request->get('image'))->save(public_path('images/uploads/' . $request->get('name') . '/' . $request->get('name')).$fileName);
         
         $project = Project::create([
             'user_id' => User::named('Anders')->id,
@@ -61,7 +61,7 @@ class ProjectController extends Controller
             [
                 [
                     'priority' => 1,
-                    'url' => env('APP_URL') .'/images/' . $request->get('name') . $fileName
+                    'url' => env('APP_URL') .'/images/uploads/' . $request->get('name') . $fileName
                 ],                             
             ]
         );

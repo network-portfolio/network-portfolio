@@ -13937,6 +13937,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -13946,7 +13952,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             name: '',
             description: '',
             github: '',
-            production_url: ''
+            production_url: '',
+            tags: ''
         };
     },
 
@@ -13970,7 +13977,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 name: this.name,
                 description: this.description,
                 github: this.github,
-                production_url: this.production_url
+                production_url: this.production_url,
+                tags: this.tags,
+                project_members: this.project_members
             }, {
                 headers: {
                     //'Content-Type': 'multipart/form-data'
@@ -14879,7 +14888,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "max-w-md flex flex-col mx-auto pt-2" }, [
-    _c("h3", [_vm._v("Create new project")]),
+    _c("h3", { staticClass: "mb-2" }, [_vm._v("Create new project")]),
     _vm._v(" "),
     _c("input", {
       directives: [
@@ -14969,7 +14978,54 @@ var render = function() {
       }
     }),
     _vm._v(" "),
-    _c("img", { staticClass: "img-responsive", attrs: { src: _vm.image } }),
+    _c("input", {
+      directives: [
+        {
+          name: "model",
+          rawName: "v-model",
+          value: _vm.tags,
+          expression: "tags"
+        }
+      ],
+      staticClass: "mb-2",
+      attrs: { name: "tags", placeholder: "tags" },
+      domProps: { value: _vm.tags },
+      on: {
+        input: function($event) {
+          if ($event.target.composing) {
+            return
+          }
+          _vm.tags = $event.target.value
+        }
+      }
+    }),
+    _vm._v(" "),
+    _c("input", {
+      directives: [
+        {
+          name: "model",
+          rawName: "v-model",
+          value: _vm.project_members,
+          expression: "project_members"
+        }
+      ],
+      staticClass: "mb-2",
+      attrs: { name: "project_members", placeholder: "project_members" },
+      domProps: { value: _vm.project_members },
+      on: {
+        input: function($event) {
+          if ($event.target.composing) {
+            return
+          }
+          _vm.project_members = $event.target.value
+        }
+      }
+    }),
+    _vm._v(" "),
+    _c("img", {
+      staticClass: "img-responsive self-center",
+      attrs: { src: _vm.image }
+    }),
     _vm._v(" "),
     _c("input", {
       staticClass: "form-control",

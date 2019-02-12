@@ -1,6 +1,8 @@
 <template>
     <div class="max-w-md flex flex-col mx-auto pt-2">
-        <h3>Create new project</h3>
+        
+        <h3 class="mb-2">Create new project</h3>
+
         <input v-model="name" name="name" class="mb-2" placeholder="name">
 
         <textarea v-model="description" class="mb-2" name="description" placeholder="description"></textarea>
@@ -9,7 +11,11 @@
 
         <input v-model="production_url" name="production_url" class="mb-2" placeholder="production_url">
 
-        <img :src="image" class="img-responsive">
+        <input v-model="tags" name="tags" class="mb-2" placeholder="tags">
+
+        <input v-model="project_members" name="project_members" class="mb-2" placeholder="project_members">
+
+        <img :src="image" class="img-responsive self-center">
         <input type="file" v-on:change="onFileChange" class="form-control">
 
 
@@ -34,7 +40,8 @@
                 name: '',
                 description: '',
                 github: '',
-                production_url: ''
+                production_url: '',
+                tags: ''
             }
         },
         methods: {
@@ -60,13 +67,15 @@
                         name: this.name,
                         description: this.description,
                         github: this.github,
-                        production_url: this.production_url
+                        production_url: this.production_url,
+                        tags: this.tags,
+                        project_members: this.project_members
                     },
                     {
                         headers: {
                             //'Content-Type': 'multipart/form-data'
                     }
-   }).then(response => {
+                }).then(response => {
                     alert("Ok finished!")
                 });
             }
