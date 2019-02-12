@@ -45,7 +45,7 @@ class ProjectAPIController extends Controller
         ImageManagerStatic::make($request->get('image'))->save(public_path('images/new/').$fileName);
         
         return $request->get('name');
-        
+
         // $project = Project::create([
         //     'user_id' => User::named('Anders')->id,
         //     'name' => 'a new project',
@@ -122,6 +122,6 @@ class ProjectAPIController extends Controller
      */
     public function destroy(Project $project)
     {
-        //
+        $project->delete();
     }
 }

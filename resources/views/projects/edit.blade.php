@@ -3,6 +3,6 @@
 @section('content')
     <app-header></app-header>
     <div class="text-center">
-        <create-project></create-project>
+        <edit-project></edit-project>
     </div>
 @endsection
