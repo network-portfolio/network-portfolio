@@ -15855,6 +15855,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -15897,57 +15902,74 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    _vm._l(_vm.projects, function(project) {
-      return _c(
-        "div",
-        {
-          key: project.name,
-          staticClass: "max-w-md  mx-auto flex flex-col",
-          attrs: { project: project }
-        },
-        [
-          _c("div", { staticClass: "flex justify-between" }, [
-            _c("p", { staticClass: "p-2" }, [
-              _vm._v(
-                "\n                " + _vm._s(project.name) + " \n            "
-              )
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "flex" }, [
-              _c(
-                "a",
-                { attrs: { href: "/projects/" + project.id + "/edit" } },
-                [
-                  _c(
-                    "button",
-                    {
-                      staticClass:
-                        "mt-2 bg-primary1 hover:bg-primary3 text-white font-bold py-2 px-4 rounded m-2"
-                    },
-                    [_vm._v("edit")]
-                  )
-                ]
-              ),
+    [
+      _c("h1", { staticClass: "mb-2" }, [_vm._v("Your projects")]),
+      _vm._v(" "),
+      _vm._l(_vm.projects, function(project) {
+        return _c(
+          "div",
+          {
+            key: project.name,
+            staticClass: "max-w-md  mx-auto flex flex-col",
+            attrs: { project: project }
+          },
+          [
+            _c("div", { staticClass: "flex justify-between" }, [
+              _c("p", { staticClass: "p-2" }, [
+                _vm._v(
+                  "\n                " +
+                    _vm._s(project.name) +
+                    " \n            "
+                )
+              ]),
               _vm._v(" "),
-              _c(
-                "button",
-                {
-                  staticClass:
-                    "mt-2 bg-red-dark hover:bg-primary3 text-white font-bold py-2 px-4 rounded m-2",
-                  on: {
-                    click: function($event) {
-                      return _vm.deleteProject(project.id)
+              _c("div", { staticClass: "flex" }, [
+                _c(
+                  "a",
+                  { attrs: { href: "/projects/" + project.id + "/edit" } },
+                  [
+                    _c(
+                      "button",
+                      {
+                        staticClass:
+                          "mt-2 bg-primary1 hover:bg-primary3 text-white font-bold py-2 px-4 rounded m-2"
+                      },
+                      [_vm._v("edit")]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "button",
+                  {
+                    staticClass:
+                      "mt-2 bg-red-dark hover:bg-primary3 text-white font-bold py-2 px-4 rounded m-2",
+                    on: {
+                      click: function($event) {
+                        return _vm.deleteProject(project.id)
+                      }
                     }
-                  }
-                },
-                [_vm._v("delete")]
-              )
+                  },
+                  [_vm._v("delete")]
+                )
+              ])
             ])
-          ])
-        ]
-      )
-    }),
-    0
+          ]
+        )
+      }),
+      _vm._v(" "),
+      _c("a", { attrs: { href: "/projects/create" } }, [
+        _c(
+          "button",
+          {
+            staticClass:
+              "mt-2 bg-green hover:bg-primary3 text-white font-bold py-2 px-4 rounded m-2"
+          },
+          [_vm._v("Create project")]
+        )
+      ])
+    ],
+    2
   )
 }
 var staticRenderFns = []

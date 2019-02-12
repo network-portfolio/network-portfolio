@@ -1,5 +1,6 @@
 <template>
     <div>
+        <h1 class="mb-2">Your projects</h1>
         <div class="max-w-md  mx-auto flex flex-col" v-for="project in projects" :key="project.name" :project="project">
             <div class="flex justify-between">
                 <p class="p-2">
@@ -15,6 +16,10 @@
                 </div>                        
             </div>
         </div>
+        <a v-bind:href="'/projects/create'">
+            <button class="mt-2 bg-green hover:bg-primary3 text-white font-bold py-2 px-4 rounded m-2">Create project</button>
+        </a>
+
     </div>
 </template>
 
