@@ -15277,7 +15277,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 _this.description = project.description;
                 _this.github = project.github;
                 _this.production_url = project.production_url;
-                //this.tags = project.tags;
+                _this.tags = project.tags;
                 //this.project_members = project.project_members;
                 console.log(project.project_members);
             });

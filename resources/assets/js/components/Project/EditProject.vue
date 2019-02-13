@@ -57,7 +57,7 @@
                     this.description = project.description;
                     this.github = project.github;
                     this.production_url = project.production_url;
-                    //this.tags = project.tags;
+                    this.tags = project.tags;
                     //this.project_members = project.project_members;
                     console.log(project.project_members)
                     

@@ -45,39 +45,6 @@ class ProjectAPIController extends Controller
         ImageManagerStatic::make($request->get('image'))->save(public_path('images/new/').$fileName);
         
         return $request->get('name');
-
-        // $project = Project::create([
-        //     'user_id' => User::named('Anders')->id,
-        //     'name' => 'a new project',
-        //     'description' => 'Placeholder',
-        //     'elevator_pitch' => 'Placeholder',
-        //     'github' => "",
-        //     'twitter' => null,
-        //     'facebook' => null,
-        //     'production_url' => '',
-        //     'status' => 'active',
-        //     'lessons_learnt' => '
-        //         [
-        //             //
-        //         ]
-        //     '
-        // ]);
-        
-        // $project->images()->createMany(
-        //     [
-        //         [
-        //             'priority' => 1,
-        //             'url' => env('APP_URL') .'/images/new/1.gif'
-        //         ],                             
-        //     ]
-        // );
-
-        // $project->projectMembers()->createMany([
-        //     [
-        //         'user_id' => User::named('Anders')->id
-        //     ],
-        // ]);
-
     }
 
     /**
