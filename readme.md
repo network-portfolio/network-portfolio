@@ -33,5 +33,6 @@ touch database/database.sqlite
 php artisan migrate:fresh --seed
 yarn
 yarn dev && yarn watch
+# Get github application keys from ajthinking
 # Now test go to http://network-portfolio.test/api/projects
 ```
