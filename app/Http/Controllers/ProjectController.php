@@ -8,6 +8,7 @@ use Carbon\Carbon;
 use Intervention\Image\ImageManagerStatic;
 use App\User;
 use App\Image;
+use Auth;
 
 
 class ProjectController extends Controller
@@ -47,10 +48,10 @@ class ProjectController extends Controller
             mkdir(public_path('images/uploads/' . $request->get('name')), 0777, true);
         }
 
-        ImageManagerStatic::make($request->get('image'))->save(public_path('images/uploads/' . $request->get('name') . '/' . $request->get('name')).$fileName);
+        ImageManagerStatic::make($request->get('image'))->save(public_path('images/uploads/' . $request->get('name') . '/') . $fileName);
         
         $project = Project::create([
-            'user_id' => User::named('Anders')->id,
+            'user_id' => Auth::user()->id,
             'name' => $request->get('name'),
             'description' => $request->get('description'),
             'github' => $request->get('github'),
@@ -61,14 +62,14 @@ class ProjectController extends Controller
             [
                 [
                     'priority' => 1,
-                    'url' => env('APP_URL') .'/images/uploads/' . $request->get('name') . $fileName
+                    'url' => env('APP_URL') .'/images/uploads/' . $request->get('name') . "/" . $fileName
                 ],                             
             ]
         );
 
         $project->projectMembers()->createMany([
             [
-                'user_id' => User::named('Anders')->id
+                'user_id' => Auth::user()->id
             ],
         ]);
     }

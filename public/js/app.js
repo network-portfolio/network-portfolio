@@ -15565,7 +15565,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             description: '',
             github: '',
             production_url: '',
-            tags: ''
+            tags: '',
+            project_members: ''
         };
     },
 
@@ -15597,7 +15598,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                     //'Content-Type': 'multipart/form-data'
                 }
             }).then(function (response) {
-                alert("Ok finished!");
+                window.location.href = '/projects';
             });
         }
     }

@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return redirect('/projects');
+    return view('splash');
 });
 
 Route::resource('/projects', "ProjectController");

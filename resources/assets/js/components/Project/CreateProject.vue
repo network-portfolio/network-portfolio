@@ -41,7 +41,8 @@
                 description: '',
                 github: '',
                 production_url: '',
-                tags: ''
+                tags: '',
+                project_members: ''
             }
         },
         methods: {
@@ -76,7 +77,7 @@
                             //'Content-Type': 'multipart/form-data'
                     }
                 }).then(response => {
-                    alert("Ok finished!")
+                    window.location.href = '/projects';
                 });
             }
         }
