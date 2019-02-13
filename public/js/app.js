@@ -16100,7 +16100,7 @@ var staticRenderFns = [
             staticClass:
               "mt-2 bg-primary1 hover:bg-primary3 text-white font-bold py-1 px-4 rounded m-2"
           },
-          [_vm._v("Register with github")]
+          [_vm._v("Login with github")]
         )
       ])
     ])

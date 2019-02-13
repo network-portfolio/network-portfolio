@@ -22,7 +22,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token', /* stimpack_io_token */
+        'password', 'remember_token', 'network_portfolio_api_token'
     ];
     
     public function projects()

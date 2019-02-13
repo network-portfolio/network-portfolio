@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('splash');
 });
 
+Route::get('/login', function () {
+    return view('splash');
+})->name('login');
+
 Route::resource('/projects', "ProjectController");
 
 Route::get('login/github', 'Auth\LoginController@redirectToProvider');
