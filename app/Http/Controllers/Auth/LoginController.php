@@ -72,8 +72,11 @@ class LoginController extends Controller
             return redirect($this->redirectTo);
         }
 
+        
+
         $authUser = User::create([
             'nickname' => $user->nickname,
+            'avatar' => $user->avatar,
             'provider' => 'github',
             'provider_id' => $user->id,
             'network_portfolio_api_token' => bin2hex(random_bytes(24))
