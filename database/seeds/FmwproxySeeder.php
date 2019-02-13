@@ -14,21 +14,17 @@ class FmwproxySeeder extends Seeder
      */
     public function run()
     {
+        $result = Project::where('name', 'FMW proxy')->get(); 
+
+        if(!$result->isEmpty()) {
+            $result->first()->delete();
+        }
+
         $project = Project::create([
-            'user_id' => User::named('Olof')->id,
+            'user_id' => User::withNickname('ajthinking')->id,
             'name' => 'FMW proxy',
             'description' => 'Save up to 90% on your FME Cloud bills',
-            'elevator_pitch' => 'Placeholder',
-            'github' => "",
-            'twitter' => null,
-            'facebook' => null,
-            'production_url' => '',
-            'status' => 'active',
-            'lessons_learnt' => '
-                [
-                    //
-                ]
-            '
+            'tags' => "FME, SAAS"
         ]);
         
         $project->images()->createMany(

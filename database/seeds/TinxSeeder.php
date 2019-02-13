@@ -14,11 +14,18 @@ class TinxSeeder extends Seeder
      */
     public function run()
     {
+        $result = Project::where('name', 'tinx')->get();
+        if(!$result->isEmpty()) {
+            $result->first()->delete();
+        }
+
+
         $project = Project::create([
             'user_id' => User::withNickname('ajthinking')->id,
             'name' => 'tinx',
-            'description' => 'Placeholder',
-            'github' => "",
+            'description' => 'Reload your Laravel Tinker session from inside Tinker, plus magic shortcuts for first(), find(), where(), and more!',
+            'github' => "github.com/furey/tinx",
+            'tags' => 'Laravel, CLI, package'
         ]);
         
         $project->images()->createMany(

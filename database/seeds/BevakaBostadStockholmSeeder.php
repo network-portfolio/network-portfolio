@@ -14,21 +14,18 @@ class BevakaBostadStockholmSeeder extends Seeder
      */
     public function run()
     {
+        $result = Project::where('name', 'bevakabostadstockholm')->get(); 
+
+        if(!$result->isEmpty()) {
+            $result->first()->delete();
+        }
+
         // PROJECT DETAILS
         $project = Project::create([
             'user_id' => User::withNickname('ajthinking')->id,
             'name' => 'bevakabostadstockholm',
             'description' => 'Subscribe to available rental units in Stockholm based on geometry.',
-            'elevator_pitch' => 'Todo.',
-            'github' => null,
-            'twitter' => null,
-            'facebook' => null,
-            'production_url' => null,
-            'status' => 'production',
-            'lessons_learnt' => '
-                [
-                ]
-            '
+            'tags' => 'Leaflet, subscription'
         ]);
         
         // PROJECT IMAGES
@@ -44,11 +41,13 @@ class BevakaBostadStockholmSeeder extends Seeder
         // PROJECT MEMBERS
         $project->projectMembers()->createMany([
             [
-                'user_id' => User::named('Olof')->id
-            ],
-            [
                 'user_id' => User::withNickname('ajthinking')->id
             ],
         ]);
+        /*
+        [
+            'user_id' => User::named('Olof')->id
+        ],
+        */
     }
 }

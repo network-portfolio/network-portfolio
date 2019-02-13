@@ -14,28 +14,19 @@ class ImjustworkingSeeder extends Seeder
      */
     public function run()
     {
+
+        $result = Project::where('name', 'imjustworking')->get(); 
+
+        if(!$result->isEmpty()) {
+            $result->first()->delete();
+        }
+
         $project = Project::create([
-            'user_id' => User::named('Olof')->id,
+            'user_id' => User::withNickName('ajthinking')->id,
             'name' => 'imjustworking',
             'description' => 'A GUI customizable chat built on a self-hosted IRC engine. Create a replica of your actual desktop workspace but it really is you chatting with your friends!',
             'elevator_pitch' => 'A camo chat for the office djungle',
-            'github' => "https://github.com/ajthinking/imjustworking",
-            'twitter' => null,
-            'facebook' => null,
-            'production_url' => null,
-            'status' => 'deprecated',
-            'lessons_learnt' => '
-                [
-                    "- Do not monkey back and build your self into or ontop of someone elses code",
-                    "- Do not use small SaaS companies for crucial components (Quickblox)",
-                    "- Cheap indian freelancers will not work",
-                    "- Its nice to keep all DOM manipulation in one JS file but it is NOT very sustainable",
-                    "- Plan out WHEN the project should be done and allocate time to it",
-                    "+ We FINISHED. Extreme persistance",
-                    "+ Involve dedicated server person",
-                    "+ We ignored the naysayers",
-                ]
-            '
+            'tags' => 'Joke'
         ]);
         
         $project->images()->createMany(
@@ -57,11 +48,14 @@ class ImjustworkingSeeder extends Seeder
 
         $project->projectMembers()->createMany([
             [
-                'user_id' => User::named('Olof')->id
-            ],
-            [
                 'user_id' => User::withNickname('ajthinking')->id
             ],
         ]);
+
+        /*
+                    [
+                'user_id' => User::named('Olof')->id
+            ],
+        */
     }
 }

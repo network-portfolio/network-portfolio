@@ -14,6 +14,13 @@ class PimpmydrawingSeeder extends Seeder
      */
     public function run()
     {
+
+        $result = Project::where('name', 'pimpmydrawing')->get(); 
+
+        if(!$result->isEmpty()) {
+            $result->first()->delete();
+        }
+
         $project = Project::create([
             'user_id' => User::named('Olof')->id,
             'name' => 'pimpmydrawing',

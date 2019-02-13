@@ -14,12 +14,18 @@ class StimpackSeeder extends Seeder
      */
     public function run()
     {
+        $result = Project::where('name', 'stimpack')->get();
+        if(!$result->isEmpty()) {
+            $result->first()->delete();
+        }
+
         // PROJECT DETAILS
         $project = Project::create([
             'user_id' => User::withNickname('ajthinking')->id,
             'name' => 'stimpack',
             'description' => 'Code automation and manipulating software for rapid Laravel application prototyping.',
-            'github' => "https://github.com/stimpack-io/stimpack",           
+            'github' => "https://github.com/stimpack-io/stimpack",
+            'tags' => 'Laravel, accelerator, kickstarter, React, ETL'           
         ]);
         
         // PROJECT IMAGES

@@ -14,21 +14,17 @@ class StackbrotherhoodSeeder extends Seeder
      */
     public function run()
     {
+        $result = Project::where('name', 'stackbrotherhood')->get(); 
+
+        if(!$result->isEmpty()) {
+            $result->first()->delete();
+        }
+
         $project = Project::create([
             'user_id' => User::withNickname('ajthinking')->id,
             'name' => 'stackbrotherhood',
-            'description' => 'Placeholder',
-            'elevator_pitch' => 'Placeholder',
-            'github' => "",
-            'twitter' => null,
-            'facebook' => null,
-            'production_url' => '',
-            'status' => 'active',
-            'lessons_learnt' => '
-                [
-                    //
-                ]
-            '
+            'description' => 'Keep track of my team questions',
+            'tags' => 'Depricated, Stack Exchange API'
         ]);
         
         $project->images()->createMany(
