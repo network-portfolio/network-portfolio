@@ -23,6 +23,7 @@
 
 
         <button class="mt-2 bg-primary1 hover:bg-primary3 text-white font-bold py-2 px-4 rounded" @click="upload">Upload</button>
+        <button class="mt-2 bg-primary1 hover:bg-primary3 text-white font-bold py-2 px-4 rounded" @click="back">Back</button>
     </div>
 </template>
 <style scoped>
@@ -79,6 +80,10 @@
                 }).then(response => {
                     window.location.href = '/projects';
                 });
+            },
+
+            back() {
+                window.location.href = '/projects';
             }
         }
     }

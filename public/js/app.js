@@ -15253,6 +15253,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -15263,7 +15264,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             description: '',
             github: '',
             production_url: '',
-            tags: ''
+            tags: '',
+            project_members: ''
         };
     },
 
@@ -15297,6 +15299,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             }).then(function (response) {
                 alert("Ok finished!");
             });
+        },
+        back: function back() {
+            window.location.href = '/projects';
         }
     }
 });
@@ -15463,6 +15468,16 @@ var render = function() {
         on: { click: _vm.upload }
       },
       [_vm._v("Upload")]
+    ),
+    _vm._v(" "),
+    _c(
+      "button",
+      {
+        staticClass:
+          "mt-2 bg-primary1 hover:bg-primary3 text-white font-bold py-2 px-4 rounded",
+        on: { click: _vm.back }
+      },
+      [_vm._v("Back")]
     )
   ])
 }
@@ -15556,6 +15571,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -15601,6 +15617,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             }).then(function (response) {
                 window.location.href = '/projects';
             });
+        },
+        back: function back() {
+            window.location.href = '/projects';
         }
     }
 });
@@ -15767,6 +15786,16 @@ var render = function() {
         on: { click: _vm.upload }
       },
       [_vm._v("Upload")]
+    ),
+    _vm._v(" "),
+    _c(
+      "button",
+      {
+        staticClass:
+          "mt-2 bg-primary1 hover:bg-primary3 text-white font-bold py-2 px-4 rounded",
+        on: { click: _vm.back }
+      },
+      [_vm._v("Back")]
     )
   ])
 }
