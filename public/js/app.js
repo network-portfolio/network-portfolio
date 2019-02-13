@@ -15915,7 +15915,7 @@ var render = function() {
           },
           [
             _c("div", { staticClass: "flex justify-between" }, [
-              _c("p", { staticClass: "p-2" }, [
+              _c("p", { staticClass: "p-2 w-full text-left font-black" }, [
                 _vm._v(
                   "\n                " +
                     _vm._s(project.name) +
@@ -15932,7 +15932,7 @@ var render = function() {
                       "button",
                       {
                         staticClass:
-                          "mt-2 bg-primary1 hover:bg-primary3 text-white font-bold py-2 px-4 rounded m-2"
+                          "mt-2 bg-primary1 hover:bg-primary3 text-white font-bold py-1 px-4 rounded m-2"
                       },
                       [_vm._v("edit")]
                     )
@@ -15943,7 +15943,7 @@ var render = function() {
                   "button",
                   {
                     staticClass:
-                      "mt-2 bg-red-dark hover:bg-primary3 text-white font-bold py-2 px-4 rounded m-2",
+                      "mt-2 bg-transparent hover:bg-primary3 text-primary1 border border-primary1 font-bold px-4 rounded m-2",
                     on: {
                       click: function($event) {
                         return _vm.deleteProject(project.id)

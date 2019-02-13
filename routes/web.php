@@ -12,7 +12,23 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/projects');
 });
 
 Route::resource('/projects', "ProjectController");
+
+Route::get('login/github', 'Auth\LoginController@redirectToProvider');
+Route::get('login/github/callback', 'Auth\LoginController@handleProviderCallback');
+
+Route::get('/users', function() {
+    return App\User::all();
+});
+
+/*
+TO REACH GOAL WE CUT FOLLOWING FEATURES
+- one image only
+- only github login
+
+...
+
+*/

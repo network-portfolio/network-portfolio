@@ -3,25 +3,26 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Model
+class User extends Authenticatable
 {
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'timestamps', 'name', 'email', 'password', 'rememberToken'
+        'name', 'provider', 'provider_id', 'network_portfolio_api_token', 'nickname'
     ];
-
     /**
      * The attributes that should be hidden for arrays.
      *
      * @var array
      */
     protected $hidden = [
-        'password'
+        'password', 'remember_token', /* stimpack_io_token */
     ];
     
     public function projects()
