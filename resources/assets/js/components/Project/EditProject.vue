@@ -20,7 +20,7 @@
 
         <input type="file" v-on:change="onFileChange" class="form-control">
 
-        <button class="mt-2 bg-primary1 hover:bg-primary3 text-white font-bold py-2 px-4 rounded" @click="upload">Upload</button>
+        <button class="mt-2 bg-primary1 hover:bg-primary3 text-white font-bold py-2 px-4 rounded" @click="update">Update</button>
         <button class="mt-2 bg-primary1 hover:bg-primary3 text-white font-bold py-2 px-4 rounded" @click="back">Back</button>
     </div>
 </template>
@@ -80,11 +80,11 @@
                 };
                 reader.readAsDataURL(file);
             },
-            upload(){
+            update(){
                 axios.post(
                     '/projects',
                     {
-                        image: this.image,
+                        //image: this.image,
                         name: this.name,
                         description: this.description,
                         github: this.github,
