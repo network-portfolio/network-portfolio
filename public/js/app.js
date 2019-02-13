@@ -15299,9 +15299,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             };
             reader.readAsDataURL(file);
         },
-        upload: function upload() {
+        update: function update() {
             __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post('/projects', {
-                image: this.image,
+                //image: this.image,
                 name: this.name,
                 description: this.description,
                 github: this.github,
@@ -15481,9 +15481,9 @@ var render = function() {
       {
         staticClass:
           "mt-2 bg-primary1 hover:bg-primary3 text-white font-bold py-2 px-4 rounded",
-        on: { click: _vm.upload }
+        on: { click: _vm.update }
       },
-      [_vm._v("Upload")]
+      [_vm._v("Update")]
     ),
     _vm._v(" "),
     _c(
