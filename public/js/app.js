@@ -13225,7 +13225,8 @@ var map = {
 	"./components/FileUpload.vue": 23,
 	"./components/Project/CreateProject.vue": 56,
 	"./components/Project/EditProject.vue": 57,
-	"./components/Project/ProjectList.vue": 66
+	"./components/Project/ProjectList.vue": 66,
+	"./components/SplashPage.vue": 72
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -15980,6 +15981,92 @@ if (false) {
   module.hot.accept()
   if (module.hot.data) {
     require("vue-hot-reload-api")      .rerender("data-v-8453f14c", module.exports)
+  }
+}
+
+/***/ }),
+/* 72 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(2)
+/* script */
+var __vue_script__ = null
+/* template */
+var __vue_template__ = __webpack_require__(73)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/SplashPage.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-f6c9efe6", Component.options)
+  } else {
+    hotAPI.reload("data-v-f6c9efe6", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 73 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex flex-col text-center" }, [
+      _vm._v("\n    Start your portfolio today!\n    "),
+      _c("a", { attrs: { href: "login/github" } }, [
+        _c(
+          "button",
+          {
+            staticClass:
+              "mt-2 bg-primary1 hover:bg-primary3 text-white font-bold py-1 px-4 rounded m-2"
+          },
+          [_vm._v("Register with github")]
+        )
+      ])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-f6c9efe6", module.exports)
   }
 }
 
