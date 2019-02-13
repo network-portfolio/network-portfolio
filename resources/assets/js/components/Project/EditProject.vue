@@ -20,10 +20,6 @@
 
         <input type="file" v-on:change="onFileChange" class="form-control">
 
-
-
-
-
         <button class="mt-2 bg-primary1 hover:bg-primary3 text-white font-bold py-2 px-4 rounded" @click="upload">Upload</button>
         <button class="mt-2 bg-primary1 hover:bg-primary3 text-white font-bold py-2 px-4 rounded" @click="back">Back</button>
     </div>
@@ -36,7 +32,10 @@
 <script>
     import axios from 'axios';
     export default{
-        
+        props: [
+            'projectId'
+        ],
+
         data(){
             return {
                 image: '',
@@ -48,6 +47,24 @@
                 project_members: ''
             }
         },
+
+        mounted() {
+            console.log(this.projectId)
+
+            fetch('/api/projects/1').then(data => {
+                data.json().then(project => {
+                    this.name = project.name;
+                    this.description = project.description;
+                    this.github = project.github;
+                    this.production_url = project.production_url;
+                    //this.tags = project.tags;
+                    //this.project_members = project.project_members;
+                    console.log(project.project_members)
+                    
+                })
+            })
+        },
+
         methods: {
             onFileChange(e) {
                 let files = e.target.files || e.dataTransfer.files;

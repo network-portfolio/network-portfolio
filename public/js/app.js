@@ -15250,13 +15250,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
+    props: ['projectId'],
+
     data: function data() {
         return {
             image: '',
@@ -15268,6 +15266,24 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             project_members: ''
         };
     },
+    mounted: function mounted() {
+        var _this = this;
+
+        console.log(this.projectId);
+
+        fetch('/api/projects/1').then(function (data) {
+            data.json().then(function (project) {
+                _this.name = project.name;
+                _this.description = project.description;
+                _this.github = project.github;
+                _this.production_url = project.production_url;
+                //this.tags = project.tags;
+                //this.project_members = project.project_members;
+                console.log(project.project_members);
+            });
+        });
+    },
+
 
     methods: {
         onFileChange: function onFileChange(e) {

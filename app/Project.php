@@ -12,7 +12,7 @@ class Project extends Model
      * @var array
      */
     protected $fillable = [
-        'timestamps', 'user_id', 'name', 'description', 'elevator_pitch', 'github', 'twitter', 'facebook', 'production_url', 'status'
+        'timestamps', 'user_id', 'name', 'description', 'elevator_pitch', 'github', 'twitter', 'facebook', 'production_url', 'status', 'tags'
     ];
 
     /**

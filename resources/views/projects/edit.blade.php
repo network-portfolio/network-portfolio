@@ -3,6 +3,6 @@
 @section('content')
     <app-header></app-header>
     <div class="text-center">
-        <edit-project></edit-project>        
+        <edit-project project-id={{ $projectId }}></edit-project>        
     </div>
 @endsection

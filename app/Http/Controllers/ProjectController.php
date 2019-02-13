@@ -56,6 +56,7 @@ class ProjectController extends Controller
             'description' => $request->get('description'),
             'github' => $request->get('github'),
             'production_url' => $request->get('production_url'),
+            'tags' => $request->get('tags'),
         ]);
         
         $project->images()->createMany(
@@ -93,7 +94,7 @@ class ProjectController extends Controller
      */
     public function edit(Project $project)
     {
-        return view('projects.edit');
+        return view('projects.edit')->with(['projectId' => $project->id]);
     }
 
     /**

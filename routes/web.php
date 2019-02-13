@@ -28,7 +28,7 @@ Route::get('/users', function() {
 TO REACH GOAL WE CUT FOLLOWING FEATURES
 - one image only
 - only github login
-
+- no filterable hashtags
 ...
 
 */
