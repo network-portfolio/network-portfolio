@@ -60,7 +60,7 @@ class ImjustworkingSeeder extends Seeder
                 'user_id' => User::named('Olof')->id
             ],
             [
-                'user_id' => User::named('Anders')->id
+                'user_id' => User::withNickname('ajthinking')->id
             ],
         ]);
     }

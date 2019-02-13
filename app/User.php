@@ -14,7 +14,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'provider', 'provider_id', 'network_portfolio_api_token', 'nickname', 'avatar'
+        'provider', 'provider_id', 'network_portfolio_api_token', 'nickname', 'avatar'
     ];
     /**
      * The attributes that should be hidden for arrays.
@@ -38,8 +38,8 @@ class User extends Authenticatable
 
 
 
-    public static function scopeNamed($query, $name)
+    public static function scopeWithNickname($query, $name)
     {
-       return $query->where('name', 'LIKE', '%' . $name . '%')->get()->first();
+       return $query->where('nickname', 'LIKE', '%' . $name . '%')->get()->first();
     }
 }

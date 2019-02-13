@@ -15,20 +15,10 @@ class TinxSeeder extends Seeder
     public function run()
     {
         $project = Project::create([
-            'user_id' => User::named('Anders')->id,
+            'user_id' => User::withNickname('ajthinking')->id,
             'name' => 'tinx',
             'description' => 'Placeholder',
-            'elevator_pitch' => 'Placeholder',
             'github' => "",
-            'twitter' => null,
-            'facebook' => null,
-            'production_url' => '',
-            'status' => 'active',
-            'lessons_learnt' => '
-                [
-                    //
-                ]
-            '
         ]);
         
         $project->images()->createMany(
@@ -42,7 +32,7 @@ class TinxSeeder extends Seeder
 
         $project->projectMembers()->createMany([
             [
-                'user_id' => User::named('Anders')->id
+                'user_id' => User::withNickname('ajthinking')->id
             ],
         ]);
     }

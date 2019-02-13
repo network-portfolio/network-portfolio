@@ -15,7 +15,7 @@ class StackbrotherhoodSeeder extends Seeder
     public function run()
     {
         $project = Project::create([
-            'user_id' => User::named('Anders')->id,
+            'user_id' => User::withNickname('ajthinking')->id,
             'name' => 'stackbrotherhood',
             'description' => 'Placeholder',
             'elevator_pitch' => 'Placeholder',
@@ -42,7 +42,7 @@ class StackbrotherhoodSeeder extends Seeder
 
         $project->projectMembers()->createMany([
             [
-                'user_id' => User::named('Anders')->id
+                'user_id' => User::withNickname('ajthinking')->id
             ],
         ]);
     }

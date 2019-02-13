@@ -42,7 +42,7 @@ class FmwproxySeeder extends Seeder
 
         $project->projectMembers()->createMany([
             [
-                'user_id' => User::named('Anders')->id
+                'user_id' => User::withNickname('ajthinking')->id
             ],
         ]);
     }

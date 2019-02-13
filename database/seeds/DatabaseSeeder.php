@@ -16,15 +16,15 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         
-        $this->call(DeveloperSeeder::class);
+        //$this->call(DeveloperSeeder::class);
         
         $this->call(StimpackSeeder::class);
-        $this->call(SprintlistSeeder::class);
-        $this->call(ImjustworkingSeeder::class);
-        $this->call(PimpmydrawingSeeder::class);
-        $this->call(TinxSeeder::class);
-        $this->call(FmwproxySeeder::class);
-        $this->call(StackbrotherhoodSeeder::class);
-        $this->call(BevakaBostadStockholmSeeder::class);
+        // $this->call(SprintlistSeeder::class);
+        // $this->call(ImjustworkingSeeder::class);
+        // $this->call(PimpmydrawingSeeder::class);
+         $this->call(TinxSeeder::class);
+        // $this->call(FmwproxySeeder::class);
+        // $this->call(StackbrotherhoodSeeder::class);
+        // $this->call(BevakaBostadStockholmSeeder::class);
     }
 }

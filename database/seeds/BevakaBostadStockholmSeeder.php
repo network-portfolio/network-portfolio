@@ -16,7 +16,7 @@ class BevakaBostadStockholmSeeder extends Seeder
     {
         // PROJECT DETAILS
         $project = Project::create([
-            'user_id' => User::named('Anders')->id,
+            'user_id' => User::withNickname('ajthinking')->id,
             'name' => 'bevakabostadstockholm',
             'description' => 'Subscribe to available rental units in Stockholm based on geometry.',
             'elevator_pitch' => 'Todo.',
@@ -47,7 +47,7 @@ class BevakaBostadStockholmSeeder extends Seeder
                 'user_id' => User::named('Olof')->id
             ],
             [
-                'user_id' => User::named('Anders')->id
+                'user_id' => User::withNickname('ajthinking')->id
             ],
         ]);
     }
