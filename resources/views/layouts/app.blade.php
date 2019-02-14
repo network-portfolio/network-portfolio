@@ -10,6 +10,9 @@
     <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
   </head>
   <body class="font-sans antialiased leading-tight bg-primary2">
+    <script>
+        let ACTIVE_USER_NICKNAME = "{{ Auth::user() ? Auth::user()->nickname : '' }}";
+    </script>
     <div id="app">
       @yield('content')
     </div>
