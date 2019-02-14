@@ -11,7 +11,6 @@
   </head>
   <body class="font-sans antialiased leading-tight bg-primary2">
     <script>
-        // Setting the active user
         let ACTIVE_USER_NICKNAME = "{{ Auth::user()->nickname }}";
     </script>
     <div id="app">
