@@ -17,6 +17,7 @@ class CreateUsersTable extends Migration
             $table->increments('id');
             $table->string('nickname');
             $table->string('avatar');
+            $table->string('portfolio')->nullable();
             $table->boolean('has_accepted_gdpr')->default(false);
             $table->boolean('has_accepted_cookies')->default(false);
             $table->string('provider');
