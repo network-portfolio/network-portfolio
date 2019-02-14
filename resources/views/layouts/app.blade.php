@@ -11,7 +11,7 @@
   </head>
   <body class="font-sans antialiased leading-tight bg-primary2">
     <script>
-        let ACTIVE_USER_NICKNAME = {{ Auth::user()->nickname }};
+        let ACTIVE_USER_NICKNAME = "{{ Auth::user()->nickname }}";
     </script>
     <div id="app">
       @yield('content')
