@@ -47,13 +47,8 @@ class PimpmydrawingSeeder extends Seeder
             ]
         );
 
-        $project->projectMembers()->createMany([
-            [
-                'user_id' => User::named('Olof')->id
-            ],
-            [
-                'user_id' => User::withNickname('ajthinking')->id
-            ],
-        ]);
+        $project->addMembers(
+            ['ajthinking', 'brainmaniac']
+        );
     }
 }

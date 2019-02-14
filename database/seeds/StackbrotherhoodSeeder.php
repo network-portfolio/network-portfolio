@@ -36,10 +36,8 @@ class StackbrotherhoodSeeder extends Seeder
             ]
         );
 
-        $project->projectMembers()->createMany([
-            [
-                'user_id' => User::withNickname('ajthinking')->id
-            ],
-        ]);
+        $project->addMembers(
+            ['ajthinking']
+        );
     }
 }
