@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
         $this->call(StimpackSeeder::class);
         $this->call(SprintlistSeeder::class);
         $this->call(ImjustworkingSeeder::class);
-        // $this->call(PimpmydrawingSeeder::class);
+        $this->call(PimpmydrawingSeeder::class);
         $this->call(TinxSeeder::class);
         $this->call(FmwproxySeeder::class);
         $this->call(StackbrotherhoodSeeder::class);
