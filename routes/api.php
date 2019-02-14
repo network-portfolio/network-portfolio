@@ -15,4 +15,4 @@ use Illuminate\Http\Request;
 
 Route::resource('/projects', 'ProjectAPIController');
 
-Route::resource('/users/{user}/projects', 'UserProjectController');
+Route::resource('/users/{nickname}/projects', 'UserProjectAPIController');

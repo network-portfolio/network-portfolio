@@ -7,30 +7,18 @@ use App\User;
 use App\Project;
 use App\ProjectMember;
 
-class UserProjectController extends Controller
+class UserProjectAPIController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(User $user)
+    public function index($nickname)
     {
-        //return $user->projects()->get(); //->get();
-
-        //$projectMemberships = ProjectMember::where('user_id', $user->id);
-
-        return Project::whereHas('projectMembers', function ($query) use($user) {
-            $query->where('user_id', $user->id);
+        return Project::whereHas('projectMembers', function ($query) use($nickname) {
+            $query->where('user_id', User::withNickname($nickname)->id);
         })->with(['projectMembers.user', 'images'])->get();
-
-
-        return \App\ProjectMember::first()->project()->get();
-        // projects()->with('projectMembers')->get()->concat(
-        //     User::named('Olof')->projects()->get()
-        // );
-        
-        //Project::where('')->with(['images', 'projectMembers.user'])->get();
     }
 
     /**
