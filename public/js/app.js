@@ -15919,7 +15919,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     mounted: function mounted() {
         var _this = this;
 
-        fetch('api/users/1/projects').then(function (data) {
+        fetch('api/users/ajthinking/projects').then(function (data) {
             data.json().then(function (projects) {
                 _this.projects = projects;
             });

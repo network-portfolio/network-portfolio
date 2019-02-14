@@ -33,7 +33,7 @@
         },
 
         mounted() {
-            fetch('api/users/1/projects').then(data => {
+            fetch('api/users/ajthinking/projects').then(data => {
                 data.json().then(projects => {
                     this.projects = projects                    
                 })
