@@ -22,20 +22,16 @@ class PimpmydrawingSeeder extends Seeder
         }
 
         $project = Project::create([
-            'user_id' => User::named('Olof')->id,
+            'user_id' => User::withNickname('brainmaniac')->id,
             'name' => 'pimpmydrawing',
-            'description' => 'Placeholder',
+            'description' => 'A nice vector library!',
             'elevator_pitch' => 'Placeholder',
             'github' => "",
             'twitter' => null,
             'facebook' => null,
             'production_url' => 'https://pimpmydrawing.com',
             'status' => 'active',
-            'lessons_learnt' => '
-                [
-                    //
-                ]
-            '
+            'tags' => 'vector'
         ]);
         
         $project->images()->createMany(
