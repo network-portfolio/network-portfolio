@@ -26,5 +26,6 @@ class DatabaseSeeder extends Seeder
         $this->call(FmwproxySeeder::class);
         $this->call(StackbrotherhoodSeeder::class);
         $this->call(BevakaBostadStockholmSeeder::class);
+        $this->call(TerracraftSeeder::class);
     }
 }

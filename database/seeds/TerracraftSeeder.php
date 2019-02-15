@@ -5,7 +5,7 @@ use App\User;
 use App\Image;
 use App\Project;
 
-class TinxSeeder extends Seeder
+class TerracraftSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,25 +14,24 @@ class TinxSeeder extends Seeder
      */
     public function run()
     {
-        $result = Project::where('name', 'tinx')->get();
+        $result = Project::where('name', 'Terracraft')->get();
         if(!$result->isEmpty()) {
             $result->first()->delete();
         }
 
 
         $project = Project::create([
-            'user_id' => User::withNickname('ajthinking')->id,
-            'name' => 'tinx',
-            'description' => 'Reload your Laravel Tinker session from inside Tinker, plus magic shortcuts for first(), find(), where(), and more!',
-            'github' => "github.com/furey/tinx",
-            'tags' => 'Laravel, CLI, package'
+            'user_id' => User::withNickname('ajthinking', 'brainmaniac')->id,
+            'name' => 'Terracraft',
+            'description' => 'A geographic MMORPG created before the Pokemon Go era. The earth is split into 400 000 000 000 tiles. Made possible by predictable geometry, seeded randoms and client side rendering.',
+            'tags' => 'Leaflet, PostGIS'
         ]);
         
         $project->images()->createMany(
             [
                 [
                     'priority' => 1,
-                    'url' => env('APP_URL') .'/images/tinx/1.gif'
+                    'url' => env('APP_URL') .'/images/Terracraft/1.png'
                 ],                             
             ]
         );
