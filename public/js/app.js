@@ -15576,9 +15576,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     mounted: function mounted() {
         var _this = this;
 
-        console.log(this.projectId);
-
-        fetch('/api/projects/1').then(function (data) {
+        fetch('/api/projects/' + this.projectId).then(function (data) {
             data.json().then(function (project) {
                 _this.name = project.name;
                 _this.description = project.description;
@@ -15587,6 +15585,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 _this.tags = project.tags;
                 //this.project_members = project.project_members;
                 console.log(project.project_members);
+
+                _this.project_members = project.project_members.map(function (item) {
+                    return item.user.nickname;
+                }).join(", ");
             });
         });
     },
@@ -15607,7 +15609,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             reader.readAsDataURL(file);
         },
         update: function update() {
-            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post('/projects', {
+            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post('/projects/' + this.projectId, {
+                _method: 'patch',
                 //image: this.image,
                 name: this.name,
                 description: this.description,

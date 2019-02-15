@@ -73,11 +73,11 @@ class ProjectController extends Controller
             ]
         );
 
-        $project->projectMembers()->createMany([
-            [
-                'user_id' => Auth::user()->id
-            ],
-        ]);
+        $project->addMembers(
+            collect(explode(',', $request->get('project_members')))->map(function($item) {
+                return trim($item);
+            })->toArray()            
+        );
     }
 
     /**
@@ -111,7 +111,21 @@ class ProjectController extends Controller
      */
     public function update(Request $request, Project $project)
     {
-        //
+        $project->update([
+            'name' => $request->get('name'),
+            'description' => $request->get('description'),
+            'github' => $request->get('github'),
+            'production_url' => $request->get('production_url'),
+            'tags' => $request->get('tags'),
+        ]);
+
+        $project->projectMembers()->delete();
+
+        $project->addMembers(
+            collect(explode(',', $request->get('project_members')))->map(function($item) {
+                return trim($item);
+            })->toArray()            
+        );        
     }
 
     /**

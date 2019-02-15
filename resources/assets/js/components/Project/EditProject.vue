@@ -49,9 +49,7 @@
         },
 
         mounted() {
-            console.log(this.projectId)
-
-            fetch('/api/projects/1').then(data => {
+            fetch('/api/projects/' + this.projectId).then(data => {
                 data.json().then(project => {
                     this.name = project.name;
                     this.description = project.description;
@@ -60,6 +58,10 @@
                     this.tags = project.tags;
                     //this.project_members = project.project_members;
                     console.log(project.project_members)
+
+                    this.project_members = project.project_members.map(item => {
+                        return item.user.nickname;
+                    }).join(", ")
                     
                 })
             })
@@ -82,8 +84,9 @@
             },
             update(){
                 axios.post(
-                    '/projects',
+                    '/projects/' + this.projectId,
                     {
+                        _method: 'patch',
                         //image: this.image,
                         name: this.name,
                         description: this.description,
